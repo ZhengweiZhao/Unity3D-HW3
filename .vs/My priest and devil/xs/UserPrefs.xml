@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{AEE55915-BE2D-0008-C8A3-D866597D4953}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MySceneController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MySceneController.cs" Line="92" Column="3" />
+      <File FileName="Assets/Scripts/MySceneActionManager.cs" />
+      <File FileName="Assets/Scripts/UserGUI.cs" Line="76" Column="1" />
+      <File FileName="Assets/Scripts/Action.cs" />
+      <File FileName="Assets/Scripts/Base.cs" />
+      <File FileName="Assets/Scripts/ClickGUI.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="My priest and devil" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="MySceneController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2d938d5e-b314-4187-a5bd-ebfdea2efa5c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
