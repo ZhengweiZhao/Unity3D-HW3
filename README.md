@@ -1,24 +1,24 @@
-﻿@[TOC](3D Game Programming & Design：游戏对象与图形基础)
+3D Game Programming & Design：游戏对象与图形基础
 
 # 游戏对象与图形基础
 ##  1、基本操作演练【建议做】
 - 下载 Fantasy Skybox FREE， 构建自己的游戏场景
 首先在Asset Store中搜索Fantasy Skybox FREE，点击download下载然后import导入。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171253521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171253521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 我在导入的时候遇到了一点小问题，就是点import怎么都没有反应。然后解决方法是重新启动了一次unity，然后在最上面的菜单栏找到asset->import unity package，会出现如下图所示的界面，然后导入即可。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005170754421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20191005170754421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 在下面asset里可以看到Fantasy Skybox FREE导入成功。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171823140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171823140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 然后我们可以在Materials里选择一个的天空盒子样式:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171926138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70#pic_center =600x300)
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20191005171926138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 在Assets 上下文菜单 -> create -> Material 给新建的skybox起名 mysky
 在 Inspector 视图中选择 Shader -> Skybox -> 6Sided，给各个面分别贴上我们下载好的资源贴图。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005191831525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70#pic_center =300x600)
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20191005191831525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 这样一个skybox就构建好了，然后我们把它应用于当前的游戏场景中。
 之后我们开始加terrain地形系统。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005192906187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70#pic_center =200x250)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005192906187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 加入terrain有很多可以调的参数，如下图所示，Terrain有五个图标，左边第一个是用来增加terrain的邻居terrain的，也就是扩充地形，第二个是绘制terrain，有增加地形高低，上颜色或纹理等等功能，第三个是种树，选中树木的预制件然后在要种的地方点击即可，第四个是绘制细节，可以改笔刷的属性，最后一个是settings，就是设置整块terrain的参数的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019100519310793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70#pic_center =300x300)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019100519310793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 上色后的terrain如下图所示：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191005192756495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NzY5MQ==,size_16,color_FFFFFF,t_70)
 因为这个的baking过程比较长，为了节省时间，没有等整个种树效果出来就关掉了（省点电），大概游戏场景制作效果如下图所示：
